@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link href="/styles.css" rel="stylesheet">
+
+
+        <!-- loads socket.io library when html file loads-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.min.js"></script>
+
+
+    </head>
+    <body>
+        <div>
+            <p>
+                Welcome to my home page! When you refresh the page it should connect to the socket server, then execute the call back
+            </p>
+        </div>
+
+        <div id="mario-chat">
+
+            <div id="chat-window">
+
+                    <!-- where messages will be received by server-->
+                    <div id="output">
+
+                    </div>
+
+                    <!-- where feedback message 'luigi is typing a message...' will be output-->
+                    <div id="feedback">
+
+                    </div>
+            </div>
+
+            <input id="handle" type="text" placeholder="handle">
+            <input id="message" type="text" placeholder="message">
+            <button id="button">Send</button>
+
+        </div>
+
+        <script src='/chat.js'></script>
+    </body>
+</html>
